@@ -30,3 +30,11 @@ def zero_or_one(i, j):
     return 1 if i==j else 0
 
 print(make_matrix(5, 4, zero_or_one))
+
+# matrix 표현, 중심성 중 방향성 있는 네트워크로 표현될 수 있을 듯!
+directed_network = [(0,0), (1,0), (1,1), (2,0), (2,2), (3,0), (3,2), (4,1), (4,4)]
+print(directed_network[1])
+# def make_node_matrix(nodes):
+
+    
+    
