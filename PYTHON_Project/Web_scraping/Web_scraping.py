@@ -11,7 +11,7 @@ soup = BeautifulSoup(r.text, 'html.parser')
 count = 0
 while count<10:
     
-    html = soup.find(id="ㅁlocation_"+str(count))
+    html = soup.find(id="location_"+str(count))
     book_title = str(html).split('"')[7]
     
     print(count+1,"위 : " +book_title)
