@@ -8,12 +8,15 @@ b = [[1,2],
      [5,6]]
 # 3열 2행
 
+# 전체 리스트의 길이, 0번째 item의 길이
 def shape(x):
     num_rows = len(x)
     num_cols = len(x[0]) if x else 0
     return num_rows, num_cols
-# 튜플로 반환
 
+print(shape(a))
+
+# 튜플로 반환
 def get_rows(x, i):
     return x[i]
 
@@ -42,6 +45,8 @@ def finding_max_row(nodes_data):
             maxValue=i[0]
     return maxValue
 
+print(finding_max_row(directed_network))
+
 def finding_max_col(nodes_data):
     maxValue=0
     for i in nodes_data:
@@ -51,12 +56,14 @@ def finding_max_col(nodes_data):
 
  
 def make_node_matrix(nodes_data, entry_fn):
-    return [[entry_fn(i,j, nodes_data) for j in range(finding_max_col(nodes_data))] 
-            for i in range(finding_max_row(nodes_data))]
+    return [[entry_fn(i,j, nodes_data) for j in range(finding_max_col(nodes_data)+1)] 
+            for i in range(finding_max_row(nodes_data)+1)]
 
 def all_zero_but_one(i, j, nodes_data):
     return 1 if (i, j) in nodes_data else 0
     
 print(make_node_matrix(directed_network, all_zero_but_one))
-# 아직 에러 (6, 4)가 출력되지 않음
+
+
+
     
