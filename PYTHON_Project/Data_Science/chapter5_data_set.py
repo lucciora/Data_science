@@ -11,3 +11,6 @@ pyplot.title("histogram")
 pyplot.xlabel("# of data")
 pyplot.ylabel("#")
 pyplot.show()
+
+
+
