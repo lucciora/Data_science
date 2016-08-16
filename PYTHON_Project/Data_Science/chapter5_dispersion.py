@@ -1,6 +1,10 @@
 from collections import Counter
 x = [1,2,3,4,5,6,10]
 
+def de_mean(x):
+    x_bar = mean(x)
+    return [x_i -x_bar for x_i in x]
+
 def mean(x):
     return sum(x)/len(x)
 
