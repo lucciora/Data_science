@@ -1,4 +1,7 @@
 from random import randint
+from pip._vendor.progress import counter
+from collections import Counter
+from matplotlib import pyplot
 num_friends =[4, 4, 5, 6, 7, 7, 7, 7,
               8, 9, 9, 10, 10, 10, 11, 
               11, 11, 11, 12, 12, 12, 
@@ -35,16 +38,30 @@ minutes_per_day = [39, 36, 34, 26, 34, 38, 34,
 outlier = num_friends.index(100)
 
 def outliers(data):
-    return [x for x in data if x > 50]
+    return [i for i, x in enumerate(data) if x > 50]
 
 print(outliers(num_friends))
 print(outliers(minutes_per_day))
 
 
+#num_friends_good = [x for i, x in enumerate(num_friends) if i != outlier]
+num_friends_good = [x for i, x in enumerate(num_friends) if i not in outliers(num_friends)]
 
-
-num_friends_good = [x for i, x in enumerate(num_friends) if i != outlier]
+print(num_friends_good)
 print(len(num_friends_good))
-daily_minutes_good = [x  for i, x in enumerate(minutes_per_day) if i != outlier]
+
+
+#daily_minutes_good = [x  for i, x in enumerate(minutes_per_day) if i != outlier]
+daily_minutes_good = [x for i, x in enumerate(minutes_per_day) if i not in outliers(minutes_per_day)]
+print(daily_minutes_good)
+print(len(daily_minutes_good))
+
+friends_counts = Counter(num_friends)
+xs = range(60)
+ys = [friends_counts[x] for x in xs]
+pyplot.bar(xs, ys)
+pyplot.axis([0, 55, 0, 10])
+pyplot.show()
+
 
 
