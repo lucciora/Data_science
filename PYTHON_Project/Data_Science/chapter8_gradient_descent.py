@@ -26,6 +26,7 @@ def step(v, direction, step_size):
             for v_i, direction_i in zip(v, direction)]
     
 
+# gradient 기울기
 def sum_of_squares_gradient(v):
     return [2*v_i for v_i in v]
 
@@ -33,7 +34,7 @@ v = [random.randint(-10, 10) for i in range(3)]
 print(v)
 
 
-tolerance = 0.0000001
+tolerance = 0.001
 
 
 while True:
