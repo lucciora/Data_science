@@ -1,5 +1,7 @@
 import math
 from matplotlib import pyplot
+
+
 def normal_cdf(x, mu=0, sigma=1):
     return (1+math.erf((x-mu) / math.sqrt(2)/sigma)) /2
 # error function 모두 더하면 1이 되는 누적 분포에 사용
