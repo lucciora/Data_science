@@ -20,21 +20,21 @@ while count < 13:
         book_author1 = soup.find_all(class_="detail")[count].find(class_="author").text.split("|")[0].split("저자 더보기")[0].strip()
         book_author2 = soup.find_all(class_="detail")[count].find(class_="author").text.split("|")[0].split("저자 더보기")[1].strip()
         print("\t"+book_author1+", "+book_author2)
-        f.write("\n" + book_author1 + book_author2)
+        f.write("\n" + book_author1 + book_author2 + "\n")
     else:
         book_author = soup.find_all(class_="detail")[count].find(class_="author").text.split("|")[0].strip()
         print("\t"+book_author)
-        f.write(book_author)
+        f.write(book_author + "\n")
         
     book_publisher = soup.find_all(class_="detail")[count].find(class_="author").text.split("|")[1].strip()
     book_publish_date = soup.find_all(class_="detail")[count].find(class_="author").text.split("|")[2].strip()
     
     
-    f.write(book_publisher)
-    f.write(book_publish_date)
+    f.write(book_publisher + "\n")
+    f.write(book_publish_date + "\n")
     
     
-    print("\t"+book_publisher)
+    print("\t"+book_publisher )
     print("\t"+book_publish_date)
     count+=1
     
