@@ -17,7 +17,7 @@ def correlation(x, y):
     stdev_x = std(x)
     
     stdev_y = std(y)
-    if stdev_x > 0 and stdev_y >0:
+    if stdev_x > 0 and stdev_y  >0:
         return covariance(x, y)/stdev_x / stdev_y
     else:
         return 0
