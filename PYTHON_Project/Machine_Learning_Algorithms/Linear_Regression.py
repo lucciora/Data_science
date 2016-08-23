@@ -15,8 +15,13 @@ regr = linear_model.LinearRegression()
 regr.fit(X_train, Y_train)
 
 print('Coefficients: \n', regr.coef_)
+# Coefficient of Determination, r ** 2
+# 결정 계수는 = 상관계수의 제곱  -- 상관 계수는 데이터의 밀도 미분계수가 0이면 상관이 없다는 것!
+# 회귀식의 정확도를 나타냄 0~1 사이 1에 가까울 수록 정확함
+# 1을 넘어설 수 있는 건가???
 print("Residual sum of squares : %.2f"
       % np.mean((regr.predict(X_test) - Y_test) ** 2))
+# 총변동 
 
 print('Variance score: %.2f' % regr.score(X_test, Y_test))
 

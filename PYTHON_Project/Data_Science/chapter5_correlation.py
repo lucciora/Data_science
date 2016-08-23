@@ -9,7 +9,7 @@ def covariance(x, y):
     n = len(x)
     return dot(de_mean(x), de_mean(y)) / (n-1)
 
-print(covariance(x,y))
+
 
 
 # 상관계수
@@ -22,4 +22,3 @@ def correlation(x, y):
     else:
         return 0
     
-print(correlation(x, y))
