@@ -7,6 +7,7 @@ url= "http://www.kyobobook.co.kr/bestseller/bestSellerMain.laf?orderClick=4da"
 r = requests.get(url)
 soup = BeautifulSoup(r.text, "html.parser")
 book_list = soup.find_all(class_="detail")
+# codes 패키지 사용해서 파일로 저장하기
 f=codecs.open('yes24.txt',encoding='utf-8',mode='w')
 count = 3
 while count < 13:
