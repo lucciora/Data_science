@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import codecs
 
 
+
 url= "http://www.kyobobook.co.kr/bestseller/bestSellerMain.laf?orderClick=4da"
 r = requests.get(url)
 soup = BeautifulSoup(r.text, "html.parser")

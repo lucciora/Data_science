@@ -14,7 +14,7 @@ soup= BeautifulSoup(r.text, "html.parser")
 # 문장에서 첫번째 a 태그의 href 속성값을 뽑아냄
 first_a = soup.find('a').get('href')
 print(first_a)
-
+'''
 # 첫 번째 p의 텍스트를 뽑아냄 <p>텍스트</p>
 first_p = soup.find('p').text
 print(first_p)
@@ -30,7 +30,7 @@ print(certain_class)
 # 태그 안에 있는 태그 뽑기, ResultSet이기 때문에 [0]을 붙여줘야 함
 tag_in_tag = soup.find_all('ul', {'class' : 'link_list'})[0].find('li').text
 print(tag_in_tag)
-                                  
+'''                                  
 
 
 
