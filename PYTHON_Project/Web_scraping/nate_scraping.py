@@ -26,7 +26,7 @@ for i in range(len(webtoons)):
     writer.writerow([title, genre, storywriter,
                          illustrator, platform,
                          startdate, address])
-    
+   
 
 
 
