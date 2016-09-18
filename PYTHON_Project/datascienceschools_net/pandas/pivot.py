@@ -9,10 +9,6 @@ df = pd.DataFrame(data, columns=['DEPARTMENT', 'YEAR', 'AVG_SAL'])
 pivot_df = df.pivot("YEAR", 'DEPARTMENT', 'AVG_SAL')
 print(pivot_df)
 
-wrong_pivot = df.pivot("AVG_SAL", "DEPARTMENT", "YEAR")
-print(wrong_pivot)
-
-
 
 
 
